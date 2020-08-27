@@ -1,8 +1,7 @@
 import { IRecords } from '../interfaces/IRecords';
 import sequelize from '../loaders/sequelize';
 import { QueryTypes } from 'sequelize';
-const CronJob = require('cron').CronJob
-import moment from 'moment'
+
 export class recordsRepository {
   async records(input: IRecords): Promise<any> {
     try {

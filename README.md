@@ -1,4 +1,4 @@
-# DDR3 CHALLENGE
+# DDR CHALLENGE
 
 Desafio api
 
@@ -18,26 +18,23 @@ Desafio api
 
 ## Exemplo arquivo env
 
-#PORT
-PORT=3000
+* PORT=3000
 
-#DEBUG
-LOG_LEVEL='debug'
+* LOG_LEVEL='debug'
 
-#DATABASE CONFIG
-DB_NAME='ddr3'
-DB_USERNAME='SEU USERNAME'
-DB_PASSWORD='SUA SENHA'
+* DB_NAME='ddr3'
+* DB_USERNAME='SEU USERNAME'
+* DB_PASSWORD='SUA SENHA'
 
 ## Criando database
 
-CRIAR BANCO DE DADOS POSTGRES
+Criar banco de dados postgres.
 
 CREATE DATABASE ddr3;
 
-APOS CRIAR DATABASE IR NA PASTA DE MIGRATIONS COPIAR E COLAR TODAS AS TABELAS DO PROJETO
+Após criar banco de dados ir na pasta de migrations copiar e colar todas as janelas do projeto.
 
-## Authors
+## Author
 
 Maycon Aguiar 
 
@@ -46,6 +43,9 @@ Maycon Aguiar
 * POST
 http://localhost:3000/ddr3/tabulations
 * POST
-http://localhost:3000/ddr3/tabulations
+http://localhost:3000/ddr3/records
 * GET
 http://localhost:3000/ddr3/matchings
+
+## Cronjob e Json Postman
+Segue no projeto cronjob de 20 em 20 segundos e json referente as apis construídas.

@@ -13,7 +13,7 @@ export default (app: Router) => {
         async (req: Request, res: Response, next: NextFunction) => {
             const logger = Container.get('logger');
             // @ts-ignore
-            logger.debug('Calling POST /communication-management/sendbillings: with: %o', {
+            logger.debug('Calling POST /ddr3/records: with: %o', {
                 "params": req.params,
                 "headers": req.headers,
                 "query": req.query,
@@ -29,7 +29,7 @@ export default (app: Router) => {
                 res.status(200).json(response);
             } catch (e) {
                 // @ts-ignore
-                logger.error('🔥 Error calling POST communication-management/sendbillings: %o', e);
+                logger.error('🔥 Error calling POST /ddr3/records: %o', e);
                 return next(e);
             }
 

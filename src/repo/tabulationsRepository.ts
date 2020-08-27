@@ -1,7 +1,6 @@
 import { ITabulations } from '../interfaces/ITabulations';
 import sequelize from '../loaders/sequelize';
 import { QueryTypes } from 'sequelize';
-const CronJob = require('cron').CronJob
 
 export class tabulationsRepository {
   async tabulations(input: ITabulations): Promise<any> {

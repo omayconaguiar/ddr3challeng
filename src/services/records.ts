@@ -1,15 +1,15 @@
 import { Service, Inject } from 'typedi';
 import { IRecords } from '../interfaces/IRecords';
-import billingModel from '../business/records';
+import recordsModel from '../business/records';
 
 @Service()
-export default class billingService {
-  private _controller: billingModel
+export default class recordsService {
+  private _controller: recordsModel
 
   constructor(
     @Inject('logger') private logger: any
   ) {
-    this._controller = new billingModel();
+    this._controller = new recordsModel();
 
   }
 

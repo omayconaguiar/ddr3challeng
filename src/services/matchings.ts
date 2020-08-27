@@ -1,22 +1,21 @@
 import { Service, Inject } from 'typedi';
-import { IMatchings } from '../interfaces/IMatchings';
-import billingModel from '../business/matchings';
+import matchingsModel from '../business/matchings';
 
 @Service()
-export default class billingService {
-  private _controller: billingModel
+export default class matchingsService {
+  private _controller: matchingsModel
 
   constructor(
     @Inject('logger') private logger: any
   ) {
-    this._controller = new billingModel();
+    this._controller = new matchingsModel();
 
   }
 
-  public async matchings(input: IMatchings): Promise<any> {
+  public async matchings(): Promise<any> {
     try {
       this.logger.silly('Calling matchingsSchema');
-      return await this._controller.matchings(input);
+      return await this._controller.matchings();
     }
     catch (e) {
       return Promise.reject(e);

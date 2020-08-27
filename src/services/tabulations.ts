@@ -1,15 +1,15 @@
 import { Service, Inject } from 'typedi';
 import { ITabulations } from '../interfaces/ITabulations';
-import billingModel from '../business/tabulations';
+import tabulationsModel from '../business/tabulations';
 
 @Service()
-export default class billingService {
-  private _controller: billingModel
+export default class tabulationsService {
+  private _controller: tabulationsModel
 
   constructor(
     @Inject('logger') private logger: any
   ) {
-    this._controller = new billingModel();
+    this._controller = new tabulationsModel();
 
   }
 

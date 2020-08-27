@@ -9,6 +9,5 @@
     ],
     "execMap": {
       "js": "sucrase-node"
-    },
-    "exec": "ts-node  --transpile-only  ./src/app.ts"
+    }
   }

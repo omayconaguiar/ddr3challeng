@@ -32,32 +32,6 @@ export class matchingsRepository {
           `, {
           type: QueryTypes.SELECT
         });      
-     
-
-        const job = new CronJob('*/5 * * * * *', async() => {    
-          if(matchingsA.length){            
-            for(var i=0;i<matchingsA.length;i++){
-              await sequelize.query(`
-                INSERT INTO "matchings" (gravacao_old, tabulacao_old)    
-                VALUES (${matchingsA[i].gravacaoid}, ${matchingsA[i].tabulacaoid})    
-                `, {
-                type: QueryTypes.INSERT
-              }); 
-            }
-          }
-          else{
-          for(var i=0;i<matchingsB.length;i++){
-            await sequelize.query(`
-              INSERT INTO "matchings" (gravacao_old, tabulacao_old)    
-              VALUES (${matchingsB[i].gravacaoid}, ${matchingsB[i].tabulacaoid})    
-              `, {
-              type: QueryTypes.INSERT
-            }); 
-          
-          }
-        }
-
-        }, null, true, 'America/Sao_Paulo')
 
         if(matchingsA.length)
         return Promise.resolve(matchingsA)

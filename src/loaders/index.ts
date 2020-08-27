@@ -3,7 +3,6 @@ import Logger from './logger';
 import sequelizeLoader from './sequelize';
 import schemas from '../../src/schemas';
 import dependencyInjectorLoader from './dependencyInjector';
-import './events';
 
 export default async ({ expressApp }) => {
 

@@ -26,13 +26,17 @@ Desafio api
 * DB_USERNAME='SEU USERNAME'
 * DB_PASSWORD='SUA SENHA'
 
-## Criando database
+## Buildando tabelas
 
 Criar banco de dados postgres.
 
 CREATE DATABASE ddr3;
 
-Após criar banco de dados ir na pasta de migrations copiar e colar todas as janelas do projeto.
+Após criar banco de dados 
+
+* yarn migrations:run v1598555624
+
+Digitar senha do banco de dados
 
 ## Author
 

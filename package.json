@@ -2,13 +2,15 @@
   "name": "ddr3Challenge",
   "version": "1.0.0",
   "description": "This is the API for the ddr3Challenge",
-  "repository": "https://github.com/omayconaguiar/ddr3challeng.git",
+  "repository": "https://github.com/omayconaguiar/ddrchallenge.git",
   "author": "Maycon Aguiar <maycon@dcc.ufrj.br>",
   "private": true,
   "main": "src/app.ts",
   "scripts": {
     "dev": "npm-run-all -p dev:*",
-    "dev:services": "nodemon src/app.ts"
+    "dev:services": "nodemon src/app.ts",
+    "migrations:new": "bash scripts/migrations-new.sh",
+    "migrations:run": "bash scripts/migrations-run.sh"
   },
   "dependencies": {
     "ajv": "6.11.0",

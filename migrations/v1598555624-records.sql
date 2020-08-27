@@ -1,7 +1,10 @@
+begin;
+
 CREATE TABLE records (
 id	SERIAL NOT NULL PRIMARY KEY,
 telefone TEXT NOT NULL,
 ramal TEXT NOT NULL,
 data_gravacao TIMESTAMP WITHOUT TIME ZONE NOT NULL DEFAULT now()
-)
+);
 
+commit;

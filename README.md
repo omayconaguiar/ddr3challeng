@@ -36,7 +36,12 @@ Após criar banco de dados
 
 * yarn migrations:run v1598555624
 
+Obs: o numero de versao é referente ao número que está na pasta migrations
+
 Digitar senha do banco de dados
+
+Para criar novas tabelas
+* yarn migrations:new Nome
 
 ## Author
 

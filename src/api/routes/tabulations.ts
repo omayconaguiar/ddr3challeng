@@ -8,7 +8,7 @@ const route = Router();
 
 export default (app: Router) => {
     app.use(route);
-    route.get('/tabulations',
+    route.post('/tabulations',
         middlewares.validateInput('tabulationsSchema'),
         async (req: Request, res: Response, next: NextFunction) => {
             const logger = Container.get('logger');

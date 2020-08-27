@@ -1,3 +1,4 @@
 export interface IMatchings {
-    mallId:any
+    gravacaoOld:any
+    tabulacaoOld:any
 }

@@ -2,31 +2,21 @@ import { IRecords } from '../interfaces/IRecords';
 import sequelize from '../loaders/sequelize';
 import { QueryTypes } from 'sequelize';
 const CronJob = require('cron').CronJob
-
-export class billingRepository {
+import moment from 'moment'
+export class recordsRepository {
   async records(input: IRecords): Promise<any> {
     try {
       return await sequelize.transaction(async function (t) {
-        const dayly: any = await sequelize.query(`
-          SELECT 
-            *
-          From
-            store 
-          WHERE mall_id =  AND
-          active = 't'
+        const records: any = await sequelize.query(`
+          INSERT INTO "records" (telefone, ramal,data_gravacao)
+          VALUES(:telefone, :ramal,:dataGravacao)                      
           `, {
           replacements: {
-            mallId: input.mallId
-          }, type: QueryTypes.SELECT
+            telefone: input.telefone,
+            ramal: input.ramal,
+            dataGravacao: input.dataGravacao,
+          }, type: QueryTypes.INSERT
         });      
-     
-        const job = new CronJob('* * * * * *', () => {        
-
-      
-
-        }, null, true, 'America/Sao_Paulo')
-
-
         return Promise.resolve()
       })
     } catch (e) {

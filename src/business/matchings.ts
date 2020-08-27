@@ -1,14 +1,14 @@
-import { billingRepository } from "../repo/recordsRepository";
+import { matchingsRepository } from "../repo/matchingsRepository";
 import { IMatchings  } from '../interfaces/IMatchings';
 
 export default class matchings implements matchings {
-    private _billingRepository: billingRepository
+    private _matchingsRepository: matchingsRepository
 
     constructor() {
-        this._billingRepository = new billingRepository();
+        this._matchingsRepository = new matchingsRepository();
     }
 
     async matchings(input: IMatchings): Promise<any> {
-        return await this._billingRepository.matchings(input);
+        return await this._matchingsRepository.matchings(input);
     }
 }

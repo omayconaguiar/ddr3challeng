@@ -15,7 +15,7 @@ export default class billingService {
 
   public async records(input: IRecords): Promise<any> {
     try {
-      this.logger.silly('Calling createLostFound');
+      this.logger.silly('Calling recordsSchema');
       return await this._controller.records(input);
     }
     catch (e) {

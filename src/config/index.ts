@@ -15,8 +15,9 @@ export default {
     },
 
     api: {
-        root: '/mos'
+        root: '/ddr3'
     },
+
 
     database: {
         name: process.env.DB_NAME || 'ddr3',

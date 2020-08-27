@@ -1,3 +1,5 @@
 export interface IRecords {
-    mallId:any
+    telefone:any;
+    ramal:any;
+    dataGravacao:any;
 }

@@ -1,0 +1,61 @@
+{
+	"info": {
+		"_postman_id": "948a574c-3c91-4555-9263-dc4ee0b69034",
+		"name": "ddr3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "records",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \"telefone\": \"11933333333\",\r\n    \"ramal\": \"203\",\r\n    \"dataGravacao\": \"2020-04-12 12:43:01\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/ddr3/records",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"ddr3",
+						"records"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tabulation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "matchings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

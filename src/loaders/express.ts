@@ -15,7 +15,7 @@ export default async ({ app }: { app: express.Application }) => {
 
     app.use(bodyParser.json());
 
-    app.use(config.api.root + config.api.version + config.api.prefix, routes());
+    app.use(config.api.root, routes());
 
     app.use((req: Request, res: Response, next: NextFunction) => {
         const err = new Error('Not Found');

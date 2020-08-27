@@ -1,3 +1,7 @@
 export interface ITabulations {
-    mallId:any
+    nomeCliente:any
+    protocolo:any
+    dataAtendimento:any
+    numeroBinado:any
+    numeroAcesso:any
 }

@@ -1,14 +1,14 @@
-import { billingRepository } from "../repo/recordsRepository";
+import { recordsRepository } from "../repo/recordsRepository";
 import { IRecords  } from '../interfaces/IRecords';
 
 export default class records implements records {
-    private _billingRepository: billingRepository
+    private _recordsRepository: recordsRepository
 
     constructor() {
-        this._billingRepository = new billingRepository();
+        this._recordsRepository = new recordsRepository();
     }
 
     async records(input: IRecords): Promise<any> {
-        return await this._billingRepository.records(input);
+        return await this._recordsRepository.records(input);
     }
 }

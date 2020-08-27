@@ -6,15 +6,11 @@
   "author": "Maycon Aguiar <maycon@dcc.ufrj.br>",
   "private": true,
   "scripts": {    
-    "dev:server": "nodemon src/app.ts",
-    "test:cleanup": "psql -q -b -U postgres -d ddr3 -h localhost < scripts/sql/database-test-cleanup.sql",
-    "posttest": "yarn run test:cleanup",
-    "watch": "yarn run start:watch",
-    "migrations:new": "bash src/migrations-new.sh",
-    "migrations:run": "src/migrations-run.sh"  
+    "dev": "npm-run-all -p dev:*",        
+    "dev:services": "nodemon src/services/matchings.ts"
   },
   "dependencies": {
-    "ajv": "6.11.0",
+      "ajv": "6.11.0",
       "axios": "^0.19.2",
       "bluebird": "3.7.2",
       "cheerio": "1.0.0-rc.3",

@@ -4,15 +4,17 @@ const recordsSchema =
     "title": "recordsSchema",
     "type": "object",
     "properties": {
-        "clientIds": {
-            "type": "array"
+        "telefone": {
+            "type": "string"
         },
-        "recordsId": {
-            "type": "integer"
+        "ramal": {
+            "type": "string"
         },
-    
+        "dataGravacao": {
+            "type": "string",
+        }
     },
-    "required": []
+    "required": ["telefone", "ramal", "dataGravacao"]
 }
 
 

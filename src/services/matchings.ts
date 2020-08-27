@@ -15,7 +15,7 @@ export default class billingService {
 
   public async matchings(input: IMatchings): Promise<any> {
     try {
-      this.logger.silly('Calling createLostFound');
+      this.logger.silly('Calling matchingsSchema');
       return await this._controller.matchings(input);
     }
     catch (e) {

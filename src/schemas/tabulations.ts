@@ -4,17 +4,24 @@ const tabulationsSchema =
     "title": "tabulationsSchema",
     "type": "object",
     "properties": {
-        "clientIds": {
-            "type": "array"
+        "nomeCliente": {
+            "type": "string"
         },
-        "tabulationsId": {
-            "type": "integer"
+        "protocolo": {
+            "type": "string"
         },
-    
+        "dataAtendimento": {
+            "type": "string",
+        },
+        "numeroBinado": {
+            "type": "string",
+        },
+        "numeroAcesso": {
+            "type": "string",
+        }
     },
-    "required": []
+    "required": ["nomeCliente", "protocolo", "dataAtendimento", "numeroBinado", "numeroAcesso"]
 }
-
 
 export default [
     {

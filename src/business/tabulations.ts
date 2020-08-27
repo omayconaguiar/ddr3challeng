@@ -1,14 +1,14 @@
-import { billingRepository } from "../repo/recordsRepository";
+import { tabulationsRepository } from "../repo/tabulationsRepository";
 import { ITabulations  } from '../interfaces/ITabulations';
 
 export default class tabulations implements tabulations {
-    private _billingRepository: billingRepository
+    private _tabulationsRepository: tabulationsRepository
 
     constructor() {
-        this._billingRepository = new billingRepository();
+        this._tabulationsRepository = new tabulationsRepository();
     }
 
     async tabulations(input: ITabulations): Promise<any> {
-        return await this._billingRepository.tabulations(input);
+        return await this._tabulationsRepository.tabulations(input);
     }
 }

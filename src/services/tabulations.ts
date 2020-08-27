@@ -15,7 +15,7 @@ export default class billingService {
 
   public async tabulations(input: ITabulations): Promise<any> {
     try {
-      this.logger.silly('Calling createLostFound');
+      this.logger.silly('Calling tabulationsSchema');
       return await this._controller.tabulations(input);
     }
     catch (e) {
